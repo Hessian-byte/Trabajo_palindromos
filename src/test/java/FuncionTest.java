@@ -5,7 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FuncionTest {
+    //Lorenzo Devia y Kianush Atighi-Moghaddam
     private Funcion a;
+    String p_prueba;
+    boolean resultado_esperado;
     @BeforeEach
     void setUp() {
         a = new Funcion();
@@ -13,9 +16,37 @@ class FuncionTest {
 
     @AfterEach
     void tearDown() {
+        a = null;
     }
 
     @Test
-    void esPalindromo() {
+    void esPalindromo1() {
+        p_prueba = "adanada";
+        resultado_esperado = true;
+        assertEquals(resultado_esperado,a.esPalindromo(p_prueba));
+    }
+    @Test
+    void esPalindromo2() {
+        p_prueba = "abcdefg";
+        resultado_esperado = false;
+        assertEquals(resultado_esperado,a.esPalindromo(p_prueba));
+    }
+    @Test
+    void esPalindromo3(){
+        p_prueba = "";
+        resultado_esperado = false;
+        assertEquals(resultado_esperado,a.esPalindromo(p_prueba));
+    }
+    @Test
+    void esPalindromo4(){
+        p_prueba = "a";
+        resultado_esperado = false;
+        assertEquals(resultado_esperado,a.esPalindromo(p_prueba));
+    }
+    @Test
+    void esPalindromo5(){
+        int n_prueba = 101;
+        resultado_esperado = true;
+        assertEquals(resultado_esperado,a.esPalindromo(n_prueba));
     }
 }
