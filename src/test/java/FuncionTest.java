@@ -43,10 +43,31 @@ class FuncionTest {
         resultado_esperado = false;
         assertEquals(resultado_esperado,a.esPalindromo(p_prueba));
     }
+    /*
     @Test
     void esPalindromo5(){
         int n_prueba = 101;
         resultado_esperado = true;
         assertEquals(resultado_esperado,a.esPalindromo(n_prueba));
     }
+     */
+    @Test
+    void esPalindromo6(){
+        p_prueba = "aca";
+        resultado_esperado = true;
+        assertEquals(resultado_esperado,a.esPalindromo(p_prueba));
+    }
+    @Test
+    void esPalindromo7(){
+        p_prueba = "acas";
+        resultado_esperado = false;
+        assertEquals(resultado_esperado,a.esPalindromo(p_prueba));
+    }
+    @Test
+    void esPalindromo8(){
+        p_prueba = "h";
+        resultado_esperado = false;
+        assertEquals(resultado_esperado,a.esPalindromo(p_prueba));
+    }
+
 }
