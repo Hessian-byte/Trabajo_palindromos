@@ -1,10 +1,18 @@
 
 public class Funcion {
-    public boolean esPalindromo(String cadena){
+
+
+    public boolean esPalindromo(Object cadena){
+        String cadenaAux = cadena.toString();
+
         String resultado = "";
-        for(int i = cadena.length()-1;i >=0;i--){
-            resultado = resultado + cadena.charAt(i);
+        for(int i = cadenaAux.length()-1;i >=0;i--){
+            resultado = resultado + cadenaAux.charAt(i);
         }
-        return resultado.equals(cadena);
+        if(cadenaAux.length() < 2){
+            return false;
+        }
+
+        return resultado.equals(cadenaAux);
     }
 }
